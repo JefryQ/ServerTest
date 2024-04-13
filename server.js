@@ -1,4 +1,4 @@
-const http = require('http');
+import { createServer } from 'http';
 
 const hostname = 'localhost';
 const port = 3000;
@@ -14,7 +14,7 @@ function requestController(){
   console.log("¡Hola desde mi servidor Node.js!\n")
 }
 
-const server = http.createServer(requestController)
+const server = createServer(requestController)
 
 server.listen(port, hostname, () => {
   console.log(`Servidor iniciado en http://${hostname}:${port}`);
